@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мой первый сайт</title>
+    <style>
+        .skill:hover {
+    transform: translateY(-5px);
+    scale: 1.1;
+    box-shadow: 13px 11px 25px rgb(112, 17, 4);
+    rotate: 1.1;
+}
+        .skills {
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #530303;
+    padding: 25px;
+    border-radius: 15px;
+    width: 200px;
+    transition: 0.3s;
+}
+    
+        .menu {
+            display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color:#530303;
+    padding: 18px;
+    border-radius: 15px;
+ }
+        .menu a:hover {
+            color: rgb(112, 17, 4);
+            transform: translateY(-3px);
+            scale: 1.05;
+        }
+
+
+        li { color: rgb(112, 17, 4); }
+        .card {
+    background-color: #530303;
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+#contact-card {
+        border-radius: 20px;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #530303;
+        background: linear-gradient(#530303, #910303, #be0505);
+        padding: 30px;
+        width: 300px;
+        box-shadow: 13px 11px 25px rgb(112, 17, 4);
+        z-index: 1000;
+    }
+#contact-card2 {
+        border-radius: 20px;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #530303;
+        background: linear-gradient(#530303, #910303, #be0505);
+        padding: 30px;
+        width: 300px;
+        box-shadow: 13px 11px 25px rgb(112, 17, 4);
+        z-index: 1000;
+}
+#about-card {
+    max-height: 300px;
+    overflow-y: auto;
+        border-radius: 20px;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #530303;
+        background: linear-gradient(#530303, #910303, #be0505);
+        padding: 30px;
+        width: 300px;
+        box-shadow: 13px 11px 25px rgb(112, 17, 4);
+        z-index: 1000;
+}
+#about-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+#about-card::-webkit-scrollbar-thumb {
+    background: #eb0a0a;
+    border-radius: 10px;
+}
+#portfolio-card {    max-height: 300px;
+    overflow-y: auto;
+        border-radius: 20px;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #530303;
+        background: linear-gradient(#530303, #910303, #be0505);
+        padding: 30px;
+        width: 300px;
+        box-shadow: 13px 11px 25px rgb(112, 17, 4);
+        z-index: 1000;
+
+}
+#portfolio-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+#portfolio-card::-webkit-scrollbar-thumb {
+    background: #eb0a0a;
+    border-radius: 10px;
+}
+
+
+    body {
+        background-color: #000000;
+        background-image: linear-gradient(rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3)),url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDfKzVbSdthuQRFu3troXnLV_3WCQg8MR3s18GpkpxIXoUWvOoWCP2PY4&s=10);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 100px;
+    }
+    h1 {
+        color: white;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    button {
+        background-color: #eb0a0a;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        margin: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 13px 11px 25px rgb(112, 17, 4);
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #ee4747;
+        scale: 1.1;
+        transform: translateY(-3px);
+        
+    }
+    button:active {
+        scale: 0.9;
+        }
+    .hero h1 {
+    font-size: 40px;
+}
+    .hero {
+    background-color: #530303;
+    background: linear-gradient(#530303, #970202, #8b0202);
+    padding: 50px;
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 700px;
+    box-shadow: 13px 11px 25px rgb(112, 17, 4);
+    border: 4px dashed rgb(112, 17, 4);
+    border-radius: 50px;
+    }
+    .menu a {
+            color:white;
+            text-decoration: none;
+            transition: 0.4s;
+        }
+        @media (max-width: 600px) {
+            .card {
+                width: 80%;}
+                
+                .menu {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+                .skills-container {
+    flex-direction: column;
+    align-items: center;
+}
+        
+    }
+</style>
+</head>
+
+<body>
+    <nav class="menu">
+    <a href="#home">Главная</a>
+    <a href="#" onclick="about()">О нас</a>
+    <a href="#" onclick="portfolio()">Портфолио</a>
+</nav>
+<section class="hero" id="home">
+    <h1>Hallo</h1>
+    <p>I am ghoul</p>
+    <button onclick="contact()">Связаться</button>
+    </section>
+<section class="skills">
+    <h2>Мои навыки</h2>
+    <div id="contact-card">
+       
+    <h2>Я канеки</h2>
+    <p>Рад тебя видеть</p>
+    <button onclick="closeContact()">Закрыть</button>
+</div>
+    <div id="contact-card2">
+    <h2>Мой телеграм.</h2>
+    <p><strong>@ssthinker</strong></p>
+    <button onclick="closeContact2()">x</button>
+</div> 
+    <div id="about-card">
+    <h2>Привет! Это моя биография.</h2>      
+        <p>Меня зовут Вова.</p>
+    <p>Я изучаю веб-разработку и учусь создавать сайты.</p>
+    <p>Сейчас я изучаю HTML, CSS и JavaScript.</p>
+    <p>Мне нравится программирование, и я хочу развиваться в этой сфере.</p>
+    <p>Моя цель — научиться создавать крутые сайты и зарабатывать на веб-разработке.</p>
+
+    <button onclick="closeAbout()">Close</button>
+</div>
+    <div id="portfolio-card">
+    <h2>Мое портфолио</h2>
+    <p>Пока этот сайт мой первый преэкт</p>
+    <p>Но я стремлюсь к большему</p>
+    
+    <button onclick="closePortfolio()">Close</button>
+</div>
+    <div class="skills-container">
+        <div class="skill">
+            <h3>HTML</h3>
+            <p>Создание структуры сайта</p>
+        </div>
+
+        <div class="skill">
+            <h3>CSS</h3>
+            <p>Дизайн и оформление сайта</p>
+        </div>
+
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <p>Добавление интерактивности</p>
+        </div>
+    </div>
+</section>
+
+<p id="massenge">Оцените сайт пожалуйста</p>
+ <div class="buttons">
+    <button onclick="sayHello()">✨Узнать больше</button>
+    <button onclick="contact2()">Связаться со мной</button>
+</div>
+<script>
+        function closePortfolio(){
+        document.getElementById("portfolio-card").style.display = "none"
+    }
+    function portfolio(){
+        document.getElementById("portfolio-card").style.display = "block"
+    }
+    function closeAbout(){
+        document.getElementById("about-card").style.display = "none"
+    }
+    function about(){
+        document.getElementById("about-card").style.display = "block"
+    }
+    function contact2(){
+        document.getElementById("contact-card2").style.display = "block"
+    }
+    function closeContact2(){
+        document.getElementById("contact-card2").style.display = "none"
+    }
+    function contact(){
+        document.getElementById("contact-card").style.display = "block";
+    }
+    function closeContact(){
+        document.getElementById("contact-card").style.display = "none"
+    }
+    function sayHello() {
+        document.getElementById("massenge").textContent = "Сайт создан с целью обучения";
+    }
+    
+</script>
+</body>
+</html>
